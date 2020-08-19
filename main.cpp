@@ -26,4 +26,4 @@ int main()
     for(std::string value : text) {
         std::cout << value << std::endl;
     }
-}
+} 
