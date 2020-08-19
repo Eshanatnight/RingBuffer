@@ -40,8 +40,10 @@ class ring
 
 
 template<typename T>
-class iterators
+class ring<T>::iterator
 {
-
-
+    public:
+        void print() {
+            std::cout << "Hello From Iterator: " << T() << std::endl;
+        }
 };
