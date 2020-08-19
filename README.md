@@ -4,28 +4,28 @@
 ---
 ## 1. Syntax {WLSS703}
     
-    1. Initialization Syntax 
+    Initialization Syntax 
 ```cpp
     ring<_type> _bufferName_(_size);
 ```
  
 ---
 
-    2. To Get a specific value in the buffer
+    To Get a specific value in the buffer
 ```cpp
     _bufferName_.get(_position);
 ```
 
 ---
 
-    3. To Add Elements
+    To Add Elements
 ```cpp
     _bufferName_.add(_element);
 ```
 
 ---
 
-    4. Size Function:  *returns size*
+    Size Function:  *returns size*
 ```cpp
     _bufferName_.size();
 ```
