@@ -36,12 +36,8 @@
 ## 2. To Be Added: {WLSS102382.}
     - [x] Dereference Operator
     - [x] Increement Operator
-        a. * ~~PostFix~~ *
-        b. * ~~PreFix~~ *
     - [ ] Equals Operator
     - [x] Not Equals Operator
     - [ ] Decreement operator
-        a. * PostFix *
-        b. * PreFix *
-    - [ ] Left Bit Shift Operator **<<**
-    - [ ] Right Bit Shift Operator **>>**
+    - [ ] Left Bit Shift Operator <<
+    - [ ] Right Bit Shift Operator >>
