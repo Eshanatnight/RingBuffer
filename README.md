@@ -2,7 +2,7 @@
 <br />
 
 ---
-## 1. Syntax {WLSS703}
+## 1. Syntax
 
 Initialization Syntax 
 ```cpp
@@ -34,7 +34,8 @@ Size Function:  *returns size*
 
 
 ---
-## 2. To Be Added: {WLSS102382.}
+
+## 2. To Be Added:
     - [x] Dereference Operator
     - [x] Increement Operator
     - [ ] Equals Operator
@@ -42,3 +43,5 @@ Size Function:  *returns size*
     - [ ] Decreement operator
     - [ ] Left Bit Shift Operator <<
     - [ ] Right Bit Shift Operator >>
+
+<br />
