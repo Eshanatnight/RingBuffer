@@ -5,7 +5,7 @@
 int main()
 {
     std::cout << "Hello World!!" << std::endl;
-    ring<std::string> text;
+    ring<std::string> text(2);
     text.add("One");
     text.add("Two");
     text.add("Three");
