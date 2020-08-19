@@ -21,8 +21,16 @@ class ring
         delete[] m_values;
     }        // !Destructor and Deletor
 
-    int size() {
+    int size() const {
         return m_size;
+    }
+
+    iterator begin() {
+        return iterator(0, *this);
+    }
+
+    iterator end() {
+        return iterator(m_size, *this);
     }
 
     void add(T value) 
@@ -42,8 +50,31 @@ class ring
 template<typename T>
 class ring<T>::iterator
 {
+    private:
+        int m_pos;
+        ring &m_ring;
+
     public:
-        void print() {
-            std::cout << "Hello From Iterator: " << T() << std::endl;
-        }
+        iterator(int pos, ring &obj): m_pos(pos), m_ring(obj)
+        {}
+        
+        iterator &operator++(int)
+        {
+            m_pos++;
+            return *this;
+        }   // !Postfix ++ operator
+
+        iterator &operator++()
+        {
+            m_pos++;
+            return *this;
+        }   // !Prefix ++ operator
+
+        T &operator*() {
+            return m_ring.get(m_pos);
+        }   // ! *Dereference operator
+
+        bool operator!=(const iterator &other) const {
+            return m_pos != other.m_pos;
+        }   // ! !NotEquals operator
 };
