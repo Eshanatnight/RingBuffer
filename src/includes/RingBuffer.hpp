@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <initializer_list>
 
 template <typename T>
 class ring
@@ -13,17 +14,35 @@ class ring
         class iterator;
 
     public:
-    ring(int size): m_pos(0), m_size(size), m_values(NULL){
+    ring(std::initializer_list<T> val): m_pos(0)
+    {
+        m_values = new T[val.size()];
+        for(auto value : val)
+        {
+            m_values[m_pos++] = value;
+        }
+        
+
+    }        // new: added Initializer Lists
+
+    ring(int size): m_pos(0), m_size(size), m_values(nullptr){
         m_values = new T[size];
-    }        // !Constructor and Alocator
+    }        // *Constructor and Alocator
 
     ~ring() {
         delete[] m_values;
-    }        // !Destructor and Deletor
+    }        // *Destructor and Deletor
 
     int size() const {
         return m_size;
     }
+
+
+    void push_fornt(T value)
+    {
+        m_values[0] = value;
+    }
+
 
     iterator begin() {
         return iterator(0, *this);
@@ -33,16 +52,18 @@ class ring
         return iterator(m_size, *this);
     }
 
-    void add(T value) 
+    void push_back(T value) 
     {
         m_values[m_pos++] = value;
         if(m_pos == m_size)
             m_pos = 0;
-    }
+    }      // new: Updated PushBack
 
     T &get(int pos) {
         return m_values[pos];
     }
+
+    //void 
 };
 
 
