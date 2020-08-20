@@ -14,17 +14,6 @@ class ring
         class iterator;
 
     public:
-    ring(std::initializer_list<T> val): m_pos(0)
-    {
-        m_values = new T[val.size()];
-        for(auto value : val)
-        {
-            m_values[m_pos++] = value;
-        }
-        
-
-    }        // new: added Initializer Lists
-
     ring(int size): m_pos(0), m_size(size), m_values(nullptr){
         m_values = new T[size];
     }        // *Constructor and Alocator
@@ -62,8 +51,6 @@ class ring
     T &get(int pos) {
         return m_values[pos];
     }
-
-    //void 
 };
 
 

@@ -41,7 +41,7 @@ Size Function:  *returns size*
     - [ ] Equals Operator
     - [x] Not Equals Operator
     - [ ] Decreement operator
-    - [ ] Left Bit Shift Operator <<
+    - [x] Left Bit Shift Operator "<<"
     - [x] Pushback and Pushfront Functions 
             (rmv -add())
 
