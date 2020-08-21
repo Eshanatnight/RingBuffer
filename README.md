@@ -18,9 +18,15 @@ To Get a specific value in the buffer
 
 ---
 
-To Add Elements
+To PushBack Elements
 ```cpp
-    _bufferName_.add(_element);
+    _bufferName_.push_back(_element);
+```
+
+---
+
+```cpp
+    _bufferName_.push_front(_element);
 ```
 
 ---

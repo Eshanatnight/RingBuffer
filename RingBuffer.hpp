@@ -14,9 +14,15 @@ class ring
         class iterator;
 
     public:
-    ring(int size): m_pos(0), m_size(size), m_values(nullptr){
-        m_values = new T[size];
-    }        // *Constructor and Alocator
+        ring(ring &other) = default;
+
+        ring() : m_pos(0), m_size(5), m_values(nullptr) {
+            m_values = new T[5];
+        }
+
+        ring(int size) : m_pos(0), m_size(size), m_values(nullptr){
+            m_values = new T[size];
+        }        // *Constructor and Alocator
 
     ~ring() {
         delete[] m_values;
@@ -25,7 +31,6 @@ class ring
     int size() const {
         return m_size;
     }
-
 
     void push_fornt(T value)
     {
@@ -48,9 +53,13 @@ class ring
             m_pos = 0;
     }      // new: Updated PushBack
 
-    T &get(int pos) {
+    const T &operator[](int pos) const {
         return m_values[pos];
-    }
+    }  //New: Added Array Index Operator /const\
+
+    T &operator[](int pos) {
+        return m_values[pos];
+    }  //New: Added Array Index Operator
 };
 
 
