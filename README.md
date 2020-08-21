@@ -13,7 +13,7 @@ Initialization Syntax
 
 To Get a specific value in the buffer
 ```cpp
-    _bufferName_.get(_position);
+    _bufferName[_position];
 ```
 
 ---
@@ -36,19 +36,4 @@ Size Function:  *returns size*
 ```cpp
     _bufferName_.size();
 ```
-<br />
-
-
----
-
-## 2. To Be Added:
-    - [x] Dereference Operator
-    - [x] Increement Operator
-    - [ ] Equals Operator
-    - [x] Not Equals Operator
-    - [ ] Decreement operator
-    - [x] Left Bit Shift Operator "<<"
-    - [x] Pushback and Pushfront Functions 
-            (rmv -add())
-
 <br />
